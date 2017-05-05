@@ -1,0 +1,6 @@
+body{
+                font-family: "Comic Sans MS", cursive, sans-serif
+            }
+            input.ng-invalid.ng-touched{
+                border: 2px solid red;
+            }
