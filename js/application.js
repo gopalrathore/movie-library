@@ -57,7 +57,7 @@ app.controller('moviecontroller', function($scope, $http, $rootScope, $location)
     $scope.search = function(){
         var title = $scope.searchtitle;
         if(title!="" || title=="undefined" || title=="undefined"){
-        $http.get("http://www.omdbapi.com/?t="+title+"&y=&plot=short&r=json")
+        $http.get("https://www.omdbapi.com/?t="+title+"&y=&plot=short&r=json")
     .success(function(response){
             if(response.Response){
                 $scope.movie=response;
