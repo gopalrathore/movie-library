@@ -63,7 +63,7 @@ app.controller('moviecontroller', function($scope, $http, $rootScope, $location)
           $scope.movie=response;
         }
       }, function myError(response) {
-        $scope.myWelcome = response.statusText;
+        $scope.error = response.statusText;
       });
     }else{
       alert("enter a movie");
