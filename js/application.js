@@ -58,12 +58,13 @@ app.controller('moviecontroller', function($scope, $http, $rootScope, $location)
     var title = $scope.searchtitle;
     if(title!="" || title=="undefined" || title=="undefined"){
       $http.get("http://www.omdbapi.com/?t="+title+"&y=&plot=short&r=json")
-      .success(function(response){
+      .then(function(response){
         if(response.Response){
           $scope.movie=response;
         }
-      }, function myError(response) {
-        $scope.error = response.statusText;
+      }, function(error) {
+        console.log(error);
+        $scope.error = error.statusText;
       });
     }else{
       alert("enter a movie");
